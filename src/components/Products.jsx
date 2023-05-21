@@ -12,7 +12,7 @@ const Products = () => {
         }
         fetchData();
     }, []);
-    console.log(products);
+    // console.log(products);
     return (
         <>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  space-x-2 space-y-2 '>
@@ -20,7 +20,7 @@ const Products = () => {
                 products.map((product) => {
                     const {id, image, price, title} = product;
                     return (
-                        <Product key={id} id={id} image={image} price={price} title={title} />
+                        <Product key={id} id={id} image={image} price={price} title={title} product={product} />
                     );
                 })
             }    

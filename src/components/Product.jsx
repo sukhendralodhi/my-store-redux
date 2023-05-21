@@ -1,10 +1,14 @@
 /* eslint-disable react/prop-types */
+import { add } from "../store/cartSlice";
+import { useDispatch } from "react-redux";
 
-const Product = ({ id, image, price, title }) => {
+const Product = ({ id, image, price, title,product }) => {
 
-    const handleAdd = (product) => {
+  const dispatch = useDispatch();
+  const handleAdd = (product) => {
+    dispatch(add(product));
+  };
 
-    }
   return (
     <article
       key={id}

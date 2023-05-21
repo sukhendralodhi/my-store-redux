@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+
+    const items = useSelector((state) => state.cart);
+
     return (
         <div className='bg-green-400 py-4'>
         <nav className='flex justify-between container mx-auto'>
@@ -15,7 +19,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </section>
-            <span>Cart Items: 0</span>
+            <span>Cart Items: {items.length}</span>
         </nav>
         </div>
     )
